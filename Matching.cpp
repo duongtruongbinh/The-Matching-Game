@@ -569,7 +569,7 @@ void playGame(pokemon **&board, int size, int timeMax)
         cin >> name;
         GoTo(35, 22);
         cout << "Your time: " << time_used << " s.";
-        Sleep(200);
+        Sleep(500);
 
         fstream leaderboard;
         switch (size)
@@ -615,6 +615,6 @@ void playGame(pokemon **&board, int size, int timeMax)
             if (c == 13)
                 break;
         }
-        MenuGame();
+        
     }
 }

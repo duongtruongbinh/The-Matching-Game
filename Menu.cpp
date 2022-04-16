@@ -1,6 +1,5 @@
 #include "Menu.h"
 
-
 void readFile(player *&rank, int &sizeofRank, int &size)
 {
     fstream leaderboard;
@@ -157,6 +156,12 @@ void Leaderboard()
     cout << "Enter to go back to menu";
     GoTo(43, 30);
     cout << "----------------------------";
+    while (true)
+    {
+        char c = getch();
+        if (c == 13)
+            break;
+    }
     delete[] rank;
 }
 
@@ -576,6 +581,7 @@ void MenuGame()
                 if (size == 8)
                     timemax = 8;
                 playGame(board, size, timemax);
+                MenuGame();
                 return;
             }
             if (choice == 2)
