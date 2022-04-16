@@ -581,6 +581,7 @@ void MenuGame()
                 if (size == 8)
                     timemax = 8;
                 playGame(board, size, timemax);
+                delete[] board;
                 MenuGame();
                 return;
             }
